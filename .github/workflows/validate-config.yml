@@ -1,0 +1,41 @@
+name: Validate Configuration
+
+on:
+  push:
+    paths:
+      - 'config.json'
+  pull_request:
+    paths:
+      - 'config.json'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Validate JSON
+        run: |
+          if ! python -m json.tool config.json > /dev/null 2>&1; then
+            echo "❌ Invalid JSON in config.json"
+            exit 1
+          fi
+          echo "✅ Valid JSON"
+
+      - name: Check required fields
+        run: |
+          python -c "
+          import json
+          with open('config.json') as f:
+              config = json.load(f)
+
+          # Check for required top-level keys
+          required = ['version', 'enabled', 'features', 'limits', 'timing', 'ui']
+          missing = [k for k in required if k not in config]
+
+          if missing:
+              print(f'❌ Missing required fields: {missing}')
+              exit(1)
+
+          print('✅ All required fields present')
+          "

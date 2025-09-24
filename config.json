@@ -1,0 +1,70 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2024-01-01T00:00:00Z",
+  "enabled": true,
+  "features": {
+    "teamButtons": true,
+    "studioBanner": true,
+    "sidePanel": true,
+    "analytics": false,
+    "debugMode": false
+  },
+  "limits": {
+    "maxConcurrent": 2,
+    "maxQueueSize": 100,
+    "maxPromptLength": 5000
+  },
+  "timing": {
+    "checkInterval": 5000,
+    "submissionCooldown": 60000,
+    "retryDelay": 1000,
+    "maxRetries": 3,
+    "statusCheckInterval": 2000,
+    "cacheTimeout": 5000
+  },
+  "ui": {
+    "calendlyUrl": "https://calendly.com/your-calendly-link",
+    "bannerText": "🚀 Running a studio? 14-day pilot with CSV import + 2× concurrency + Drive export",
+    "bannerCta": "Book demo →",
+    "messages": {
+      "queueStarted": "Queue processing started",
+      "queueStopped": "Queue processing stopped",
+      "promptAdded": "Prompt added to queue",
+      "promptSubmitted": "Prompt submitted successfully",
+      "queueEmpty": "Queue is empty",
+      "generationComplete": "Generation complete"
+    }
+  },
+  "selectors": {
+    "promptInput": [
+      "textarea[placeholder*='Describe your']",
+      "input[placeholder*='Describe your']",
+      "textarea[role='textbox']"
+    ],
+    "createButton": {
+      "selector": "button",
+      "textPatterns": ["Create video", "Create image", "Generate"]
+    },
+    "activityButton": [
+      "[aria-label*='Activity']",
+      "button:has-text('Activity')",
+      "a:has-text('Activity')"
+    ]
+  },
+  "experiments": {
+    "newUI": {
+      "enabled": false,
+      "rolloutPercentage": 0
+    },
+    "autoRetry": {
+      "enabled": true,
+      "maxAttempts": 3
+    }
+  },
+  "announcements": {
+    "enabled": false,
+    "message": "",
+    "link": "",
+    "type": "info"
+  }
+}
