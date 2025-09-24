@@ -10,7 +10,7 @@
     "debugMode": false
   },
   "limits": {
-    "maxConcurrent": 2,
+    "maxConcurrent": 3,
     "maxQueueSize": 100,
     "maxPromptLength": 5000
   },
