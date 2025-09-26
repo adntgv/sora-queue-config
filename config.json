@@ -23,8 +23,8 @@
     "cacheTimeout": 5000
   },
   "ui": {
-    "calendlyUrl": "https://calendly.com/your-calendly-link",
-    "bannerText": "🚀 Running a studio? 14-day pilot with CSV import + 2× concurrency + Drive export",
+    "calendlyUrl": "https://calendly.com/adntgv/sora-queue",
+    "bannerText": "🚀 Running a studio? 14-day pilot with Team features and dedicated support",
     "bannerCta": "Book a demo →",
     "messages": {
       "queueStarted": "Queue processing started",
