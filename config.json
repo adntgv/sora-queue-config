@@ -64,7 +64,11 @@
     ],
     "createButton": {
       "selector": "button",
-      "textPatterns": ["Create video", "Create image", "Generate"]
+      "textPatterns": [
+        "Create video",
+        "Create image",
+        "Generate"
+      ]
     },
     "activityButton": [
       "[aria-label*='Activity']",
