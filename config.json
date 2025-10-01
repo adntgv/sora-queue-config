@@ -42,6 +42,11 @@
     "calendlyUrl": "https://calendly.com/adntgv/sora-queue",
     "bannerText": "🚀 Running a studio? 14-day pilot with Team features and dedicated support",
     "bannerCta": "Book a demo →",
+    "upsellIntensity": "minimal",
+    "showStudioBanner": false,
+    "showInlineOptionsCard": false,
+    "showControlsUpgradeButton": false,
+    "lockBadgeStyle": "icon",
     "messages": {
       "queueStarted": "Queue processing started",
       "queueStopped": "Queue processing stopped",
@@ -69,8 +74,8 @@
   },
   "experiments": {
     "newUI": {
-      "enabled": false,
-      "rolloutPercentage": 0
+      "enabled": true,
+      "rolloutPercentage": 100
     },
     "autoRetry": {
       "enabled": true,
